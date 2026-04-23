@@ -53,7 +53,7 @@ def jump(x):
 # ==================================================================
 
 try:
-    for x in range(_______, _______, _______):
+    for x in range(200, 601, 200):
         jump(x)
 except Exception:
     pass   # fill in the blanks above!
@@ -210,7 +210,10 @@ def main():
     big_font = pygame.font.SysFont('Arial', 52, bold=True)
 
     bg      = None
-    bg_path = os.path.join(os.path.dirname(__file__), '..', 'campus.jpg')
+    base = os.path.join(os.path.dirname(__file__), '..')
+    bg_path = next((os.path.join(base, f'campus{ext}')
+                    for ext in ('.jpg', '.jpeg', '.png')
+                    if os.path.exists(os.path.join(base, f'campus{ext}'))), '')
     if os.path.exists(bg_path):
         bg = pygame.transform.scale(
             pygame.image.load(bg_path), (SCREEN_W, SCREEN_H)
