@@ -53,7 +53,7 @@ def jump(x):
 # ==================================================================
 
 try:
-    for x in range(200, 601, 200):
+    for x in range(_______, _______, _______):
         jump(x)
 except Exception:
     pass   # fill in the blanks above!
@@ -184,7 +184,7 @@ def draw_overlay(screen, font, big_font):
             p['y'] += p['vy']
             pygame.draw.rect(screen, p['color'],
                              (int(p['x']), int(p['y']), p['w'], p['h']))
-        t   = big_font.render("You made it!", True, YELLOW)
+        t   = big_font.render("You made it!", True, BLACK)
         sub = font.render("Press R to run again   |   Q to quit", True, WHITE)
         screen.blit(t,   (W // 2 - t.get_width()   // 2, 140))
         screen.blit(sub, (W // 2 - sub.get_width() // 2, 210))
@@ -194,7 +194,7 @@ def draw_overlay(screen, font, big_font):
         ov.fill((0, 0, 0, 150))
         screen.blit(ov, (0, 0))
         t   = big_font.render("You fell!", True, (220, 60, 60))
-        sub = font.render("Press R to run again   |   Q to quit", True, WHITE)
+        sub = font.render("Press R to run again   |   Q to quit", True, BLACK)
         screen.blit(t,   (W // 2 - t.get_width()   // 2, H // 2 - 40))
         screen.blit(sub, (W // 2 - sub.get_width() // 2, H // 2 + 20))
 
