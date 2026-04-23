@@ -1,5 +1,5 @@
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))  # allows importing from kid_game/ and teen_game/ in later tasks
 
 HOLE_W = 60
 
