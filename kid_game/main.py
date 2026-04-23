@@ -22,7 +22,7 @@ CHAR_START_X   = 20.0
 SPEED          = 200 / FPS    # ~3.33 px/frame  ->  200 px/s  ->  4-second crossing
 GRAVITY        = 0.5
 JUMP_VEL       = -10.0
-HOLE_W         = 60
+HOLE_W         = 80
 TILE_W         = 40
 
 # Colors
@@ -182,7 +182,7 @@ def draw_overlay(screen, font, big_font):
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
-    pygame.display.set_caption("Coding Game -- Junior Edition")
+    pygame.display.set_caption("Coding Game — Junior Edition")
     clock    = pygame.time.Clock()
     font     = pygame.font.SysFont('Arial', 24)
     big_font = pygame.font.SysFont('Arial', 52, bold=True)

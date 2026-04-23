@@ -1,7 +1,7 @@
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))  # allows importing from kid_game/ and teen_game/ in later tasks
 
-HOLE_W = 60
+HOLE_W = 80
 
 def is_over_hole(center_x, holes, hole_w=HOLE_W):
     return any(hx <= center_x <= hx + hole_w for hx in holes)
@@ -21,13 +21,13 @@ def test_over_hole_left_edge():
     assert is_over_hole(200, [200, 400, 600]) is True
 
 def test_over_hole_right_edge():
-    assert is_over_hole(260, [200, 400, 600]) is True
+    assert is_over_hole(280, [200, 400, 600]) is True
 
 def test_not_over_hole_before():
     assert is_over_hole(199, [200, 400, 600]) is False
 
 def test_not_over_hole_after():
-    assert is_over_hole(261, [200, 400, 600]) is False
+    assert is_over_hole(281, [200, 400, 600]) is False
 
 def test_over_hole_empty_list():
     assert is_over_hole(300, []) is False
