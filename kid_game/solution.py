@@ -8,4 +8,4 @@
 #  Try adding:  200, 400, 600
 # -------------------------------------------------------
 
-hole_positions = [  ]   # <-- add numbers here, then run main.py
+hole_positions = [100, 500]   # <-- add numbers here, then run main.py

@@ -52,11 +52,9 @@ def jump(x):
 #  Hint:  range(start, stop, step)
 # ==================================================================
 
-try:
-    for x in range(_, _, _):
+for x in range(200, 800, 200):
         jump(x)
-except Exception:
-    pass   # fill in the blanks above!
+# fill in the blanks above!
 
 # ==================================================================
 
@@ -193,7 +191,7 @@ def draw_overlay(screen, font, big_font):
         ov = pygame.Surface((W, H), pygame.SRCALPHA)
         ov.fill((0, 0, 0, 150))
         screen.blit(ov, (0, 0))
-        t   = big_font.render("You did well yeyeyeyeye!", True, RED)
+        t   = big_font.render("You fell!", True, RED)
         sub = font.render("Press R to run again   |   Q to quit", True, YELLOW)
         screen.blit(t,   (W // 2 - t.get_width()   // 2, H // 2 - 40))
         screen.blit(sub, (W // 2 - sub.get_width() // 2, H // 2 + 20))
@@ -204,7 +202,7 @@ def draw_overlay(screen, font, big_font):
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
-    pygame.display.set_caption("Coding Game — Senior Edition - claude did this bro not you (we are going to be homeless)")
+    pygame.display.set_caption("Coding Game — Senior Edition")
     clock    = pygame.time.Clock()
     font     = pygame.font.SysFont('Arial', 24)
     big_font = pygame.font.SysFont('Arial', 52, bold=True)

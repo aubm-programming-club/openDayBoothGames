@@ -4,10 +4,8 @@ import os
 import random
 
 # Load the attendee's answer (gracefully handle missing/broken file)
-try:
-    from solution import hole_positions
-except Exception:
-    hole_positions = []
+from solution import hole_positions
+
 
 # ------------------------------------------------------------------
 # CONSTANTS
